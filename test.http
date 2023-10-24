@@ -1,0 +1,66 @@
+GET http://localhost:5050/blogPost
+
+####
+POST http://localhost:5050/authors
+Content-Type: application/json
+
+{
+    "firstName": "Pippo",
+    "lastName": "Pippa",
+    "email": "mail@mail.it",
+    "bornDate": "02/02/1900",
+    "avatar": "asd"
+}
+
+####
+
+POST http://localhost:5050/blogPost/
+Content-Type: application/json
+
+{
+    "category": "Pippo",
+    "title": "Pippa",
+    "cover": "sds",
+    "content": "sada",
+    "author": {
+        "name": "pippolino"
+    },
+    "readTime": {
+        "value": 2
+    }
+}
+
+####
+
+POST http://localhost:5050/blogPost/
+Content-Type: application/json
+
+{
+    "category": "Pippo",
+    "title": "Pippa",
+    "cover": "sds",
+    "content": "sada",
+    "author": {
+        "name": "pippolino"
+    }
+}
+
+####
+
+GET http://localhost:5050/blogPost/653392fb39c8a39e62e29c6e/comments
+
+
+####
+DELETE http://localhost:5050/blogPost/comment/6535340e749ed568473bb654
+
+####
+POST http://localhost:5050/send-email
+Content-Type: application/json
+
+{
+    "subject": "TestMail",
+    "text": "MailTest"
+}
+
+####
+GET http://localhost:5050/blogPost/byTitle?title=Secondo
